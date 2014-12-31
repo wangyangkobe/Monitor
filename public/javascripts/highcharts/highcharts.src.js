@@ -1315,7 +1315,7 @@ defaultOptions = {
 	global: {
 		useUTC: true,
 		//timezoneOffset: 0,
-		canvasToolsURL: 'http://code.highcharts.com/4.0.1/modules/canvas-tools.js',
+		canvasToolsURL: 'http://code.highcharts.com/4.0.1/models/canvas-tools.js',
 		VMLRadialGradientURL: 'http://code.highcharts.com/4.0.1/gfx/vml-radial-gradient.png'
 	},
 	chart: {
@@ -1680,7 +1680,7 @@ function setOptions(options) {
 }
 
 /**
- * Get the updated default options. Until 3.0.7, merely exposing defaultOptions for outside modules
+ * Get the updated default options. Until 3.0.7, merely exposing defaultOptions for outside models
  * wasn't enough because the setOptions method created a new object.
  */
 function getOptions() {

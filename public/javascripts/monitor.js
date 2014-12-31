@@ -5,7 +5,7 @@ var monitor = function (ip) {
     Highcharts.setOptions({
         global: {
             useUTC: false
-        }
+    }
     });
 
     $('#container').highcharts({
@@ -46,6 +46,7 @@ var monitor = function (ip) {
             }]
         },
         tooltip: {
+            crosshairs: [true,true],
             formatter: function () {
                 return '<b>' + this.series.name + '</b>(' + num + ')<br/>' +
                     Highcharts.dateFormat('%H:%M:%S', this.x) + '<br/>' +
@@ -56,7 +57,15 @@ var monitor = function (ip) {
             enabled: true
         },
         exporting: {
-            enabled: false
+            enabled: tru
+        },
+        plotOptions: {
+            spline: {
+                dataLabels: {
+                    enabled: false
+                },
+                enableMouseTracking: false
+            }
         },
         series: [{
             name: 'CPU',
